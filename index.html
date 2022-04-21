@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Fortune Cookie</title>
+</head>
+
+
+
+<body>
+
+
+
+
+
+  <div class="container">
+
+
+
+    <form action="post" id="signup"  method="post">
+        <h1> Your Fortune Cookie</h1> <br>
+      <div class="info">
+
+
+
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" />
+        <br><br> <small></small>
+
+        <label for="email">E-mail:  </label>
+        <input type="text" id="email" name="email" />
+        <br><br> <small></small>
+
+      </div>
+      <h3>What's your favorite getaway idea?</h3>
+      <div class="vacation">
+
+
+          <input type="radio" id="vac1" name="fav_vac" value="Mountains" checked>
+          <label for="vac1">Mountains</label><br>
+          <input type="radio" id="vac2" name="fav_vac" value=" Popular City">
+          <label for="vac2">Popular City</label><br>
+          <input type="radio" id="vac3" name="fav_vac" value="Beach">
+          <label for="vac3">Beach</label>
+        <br> <br>
+      </div>
+
+      <div class="season">
+
+
+        <h3 >Choose your favorite season:</h3>
+        <select id="season" name="season" required>
+          <option value="Fall">Fall</option>
+          <option value="Spring">Spring</option>
+          <option value="Autumn" selected>Autumn</option>
+          <option value="Summer">Summer</option>
+        </select><br> <br>
+
+
+      </div>
+
+      <h3>What's your goal for the next 3 months?</h3>
+      <div class="getaway" >
+
+
+        <input type="checkbox" id="goal" name="goal" value="Learn new skill" checked onclick="return ValidateGoalSelection();">
+        <label for="goal"> Learn a new skill</label><br>
+        <input type="checkbox" id="goal" name="goal" value="Take a break" onclick="return ValidateGoalSelection();">
+        <label for="goal"> Take a break</label><br>
+        <input type="checkbox" id="goal" name="goal" value="Get Fit"onclick="return ValidateGoalSelection();">
+        <label for="goal"> Get fit</label><br><br>
+      </div>
+
+      <h5>On a scale of 1 - 10, (10 being most confident) how confident are you about reaching your goal? Choose a number:</h5> <br>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="10" value="5" class="slider" id="myRange">
+          <p>Value: <span id="demo"></span< /p>
+        </div> <br>
+
+
+        <div class="message">
+
+          <label for="msg">Message:</label>
+          <textarea id="msg" name="user_message" placeholder="optional" maxlength="40"></textarea>
+          <br>
+
+
+
+        </div> <br>
+
+        <!-- Submit the form -->
+        <div class="field">
+          <button type="submit" class="full" name="button">Submit</button>
+        </div>
+    </form>
+
+
+  </div>
+
+
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
